@@ -17,7 +17,7 @@ child();
 
 //함수외부에서 특정 함수 스코프 안에 선언된 내부 함수 호출하기
 //(부모 함수에서 내부 함수를 외부로 리턴)
-function parent(){
+function parent(){ v
   const a = 100;
   const child = function(){
     console.log(a);
