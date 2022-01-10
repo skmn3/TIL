@@ -1,6 +1,6 @@
-## ※ 프로토타입 (Prototype)
+## 📕 프로토타입 (Prototype)
 
-### 1. 프로토타입 객체
+### 📒 프로토타입 객체
 
 - 자바스크립트는 프로토타입 기반 객체지향 프로그래밍 언어
 
@@ -31,7 +31,7 @@
 - [[Prototype]] 객체의 데이터 프로퍼티는 get 액세스를 위해 상속되어 자식 객체의 프로퍼티처럼 사용
 - [Prototype]]의 값은 Prototype(프로토타입) 객체이며 [__proto__] accessor property로 접근할 수 있음 -> 접근하면 내부적으로 [Object.getPrototypeOf]가 호출되어 프로토타입 객체를 반환
 
-### 2. [[Prototype]] vs prototype 프로퍼티
+### 📒 [Prototype] vs prototype 프로퍼티
 
 ```javascript
 function Person(name) {
@@ -64,7 +64,7 @@ console.dir(foo);    // prototype 프로퍼티가 없다.
     console.log(Person.prototype === foo.__proto__);
     ```
 
-### 3. constructor 프로퍼티
+### 📒 constructor 프로퍼티
 
 - constructor 프로퍼티는 객체의 입장에서 자신을 생성한 객체를 가리킴
 
@@ -90,7 +90,7 @@ console.log(foo.constructor === Person);
 console.log(Person.constructor === Function);
 ```
 
-### 4. Prototype chain
+### 📒 Prototype chain
 
 - Prototype chain: 자바스크립트는 특정 객체의 프로퍼티나 메소드에 접근하려고 할 때 해당 객체에 접근하려는 프로퍼티 또는 메소드가 없다면 [[Prototype]]이 가리키는 링크를 따라가 자신의 부모 역할을 하는 프로토타입 객체의 프로퍼티나 메소드를 차례대로 검색
 
@@ -119,7 +119,7 @@ console.log(student.__proto__ === Object.prototype); // true
 console.log(Object.prototype.hasOwnProperty('hasOwnProperty')); // true
 ```
 
-#### 4.1 객체 리터럴 방식으로 생성된 객체의 프로토타입 체인
+#### 📗 객체 리터럴 방식으로 생성된 객체의 프로토타입 체인
 
 - 객체 생성 방법은 3가지
   - 객체 리터럴
@@ -151,7 +151,7 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ④ true
 
 ![Object literal Prototype chaining](https://poiemaweb.com/img/object_literal_prototype_chaining.png)
 
-#### 4.2 생성자 함수로 생성된 객체의 프로토타입 체인
+#### 📗 생성자 함수로 생성된 객체의 프로토타입 체인
 
 - 함수를 정의하는 방식은 3가지
   - 함수선언식(Function declaration)
@@ -215,7 +215,7 @@ console.log(Function.prototype.__proto__ === Object.prototype); // ⑤ true
 
 - 이때 Object.prototype 객체를 프로토타입 체인의 종점(End of prototype chain)이라 함
 
-### 5. 프로토타입 객체의 확장
+### 📒 프로토타입 객체의 확장
 
 - 프로토타입 객체도 객체이므로 일반 객체와 같이 프로퍼티를 추가/삭제
 - 추가/삭제된 프로퍼티는 즉시 프로토타입 체인에 반영
@@ -240,7 +240,7 @@ foo.sayHello();
 
 ![extension of prototype](https://poiemaweb.com/img/extension_prototype.png)
 
-### 6. 원시 타입(Primitive data type)의 확장
+### 📒 원시 타입(Primitive data type)의 확장
 
 - 자바스크립트에서 원시 타입(숫자, 문자열, boolean, null, undefined)을 제외한 모든것은 객체
 - 아래 예제를 살펴보면 원시 타입인 문자열이 객체와 유사하게 동작
@@ -315,7 +315,7 @@ console.log(Function.prototype.__proto__  === Object.prototype); // ⑤ true
 
 ![String constructor function prototype chaining](https://poiemaweb.com/img/string_constructor_function_prototype_chaining.png)
 
-### 7. 프로토타입 객체의 변경
+### 📒 프로토타입 객체의 변경
 
 - 객체를 생성할 때 프로토타입은 결정 -> 결정된 프로토타입 객체는 다른 임의의 객체로 변경 
 
@@ -360,7 +360,7 @@ console.log(bar.constructor); // ② Object()
 
 - 따라서 프로토타입 체인에 의해 bar.constructor의 값은 프로토타입 체이닝에 의해 Object.prototype.constructor 즉 Object() 생성자 함수가 됨
 
-### 8. 프로토타입 체인 동작 조건
+### 📒 프로토타입 체인 동작 조건
 
 - 객체의 프로퍼티를 참조하는 경우, 해당 객체에 프로퍼티가 없는 경우, 프로토타입 체인이 동작
 

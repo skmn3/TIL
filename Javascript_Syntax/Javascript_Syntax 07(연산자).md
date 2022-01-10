@@ -1,6 +1,6 @@
-## ※표현식(Expression)과 연산자(Operator)
+## 📕 표현식(Expression)과 연산자(Operator)
 
-#### 1.1 표현식과 연산자
+#### 📒 표현식과 연산자
 
 - 표현식은 리터럴, 식별자, 연산자, 함수 호출 등의 조합을 말함
 - 표현식은 평가(evaluation. 표현식을 실행하여 하나의 값을 만드는 과정)되어 하나의 값을 만든다
@@ -21,7 +21,7 @@ spuare()
 
 
 
-#### 1.2 문(statement)과 표현식(expression)
+#### 📒 문(statement)과 표현식(expression)
 
 - 문(statement)은 자바스크립트 엔진에서 내리는 명령
 - 변수 선언문을 실행하면 변수가 3단계에 의해 선언이 되고, 할당문을 실행하면 할당됨
@@ -47,13 +47,13 @@ for(var i=0; i < 10; i++){...}
 
 
 
-#### 1.3 문(statement)과 표현식(expression) 비교
+#### 📒 문과 표현식 비교
 
 - 표현식(Expression)은 값을 반환하는 식 또는 코드 
 - 문(statement)은 프로그램을 구성하는 기본 단위이자 최소 실행 단위.
 - 쉽게 말해서 문(statement)은 (while문, for문)과 같이 조건이며, 표현식은 코드 또는 식이라고 볼 수 있다.
 
-#### 1.3.1 표현식인 문과 표현식이 아닌 문
+#### 📒 표현식인 문과 표현식이 아닌 문
 
 - 표현식인 문과 표현식이 아닌 문을 구별하는 가장 간단하고 명료한 방법은 변수에 할당해 보는 것
 
@@ -81,7 +81,7 @@ console.log(foo); // 100
 
 - foo 변수에는 100이 할당
 
-## ※연산자(Operator)
+## 📕 연산자(Operator)
 
 - 하나 이상의 표현식을 대상으로 산술, 할당, 비교, 논리, 타입 연산 등을 수행해 하나의 값을 만드는 것
 
@@ -107,11 +107,9 @@ var color = 'red'; // "red"
 typeof 'Hi' // "string"
 ```
 
-![2.Startup JavaScript - 연산자](https://image.slidesharecdn.com/startupjavascriptchapter2-160923051157/95/2startup-javascript-3-638.jpg?cb=1474607595)
 
 
-
-## ※산술 연산자(Arithmetic Operator)
+## 📕 산술 연산자(Arithmetic Operator)
 
 - 피연산자를 대상으로 수학적 계산을 수행해 새로운 숫자 값을 만듬. 
 
@@ -119,13 +117,13 @@ typeof 'Hi' // "string"
 
 - 이항 산술 연산자와 단항 산술 연산자로 구분
 
-#### 3.1 이항 산술 연산자(Binomial arithmetic operator)
+#### 📒 이항 산술 연산자(Binomial arithmetic operator)
 
 - 이항산술연산자(Binomial arithmetic operator)는 2개의 피연산자를 대상으로 연산하여 숫자 타입의 값을 만듬
 
 ![자바스크립트 [javascript] (3장) 산술연산자](https://blog.kakaocdn.net/dn/bFaDxF/btqIruTADoi/T3LY6eveDTIhfgJJ61oQO0/img.png)
 
-#### 3.2 단항 산술 연산자(Unary arithmetic operator)
+#### 📒 단항 산술 연산자(Unary arithmetic operator)
 
 - 단항 산술 연산자(Unary arithmetic operator)는 1개의 피연산자를 대상으로 연산
 - 증가/감소 연산을 하면 피연산자의 값이 바뀐다.
@@ -137,7 +135,7 @@ typeof 'Hi' // "string"
 | +                | 어떠한 효과도 없음.음수를 양수로 반전하지도 않음 |
 | -                | 양수를 음수로 음수를 양수로 반전한 값을 반환함   |
 
-★ 단항 산술 연산자 예제 ★
+- 단항 산술 연산자 예제
 
 ```javascript
 var x = 5, result;
@@ -161,7 +159,7 @@ console.log(result, x); // 5 5
 
 
 
-#### 3.3 `–` 단항 연산자
+#### 📒  `–` 단항 연산자
 
 - 피연산자의 부호를 반전한 값을 반환
 
@@ -174,7 +172,7 @@ console.log(result, x); // 5 5
 
 
 
-#### 3.4 문자열 연결 연산자(String concatenation operator)
+#### 📒 문자열 연결 연산자(String concatenation operator)
 
 - `+` 연산자는 피연산자 중 하나 이상이 문자열인 경우 문자열 연결 연산자로 동작하고 그 외의 경우는 덧셈 연산자로 동작함.
 
@@ -194,11 +192,10 @@ true + false // 1(true->1 / false -> 0)
 
 
 
-## ※ 할당 연산자(Assignment Operator)
+## 📕 할당 연산자(Assignment Operator)
 
-- 우항에 있는 피연산자의 평가 결과를 좌항에 있는 변수에 할당
-
-![img](https://mblogthumb-phinf.pstatic.net/20130428_89/hsjeong106_13671159238036WKFL_PNG/%B1%D7%B8%B22.png?type=w2)
+- 우항에 있는 피연산자의 평가 결과를 좌항에 있는 변수에 할당한다
+- 할당 연산 표현식을 다른 변수에 할당할 수도 있다.
 
 ```jsx
 var x;
@@ -222,11 +219,9 @@ y = x = 10; // 연쇄 할당(Chained assignment)
 console.log(x, y); // 10 10
 ```
 
-- 할당 연산 표현식을 다른 변수에 할당할 수도 있다.
 
 
-
-## ※ 비교 연산자(Comparison Operator)
+## 📕 비교 연산자(Comparison Operator)
 
 - 좌항과 우항의 피연산자를 비교하여 불리언 값을 반환하고, if 문이나 for 문과 같은 제어문의 조건식에서 주로 사용
 
@@ -236,7 +231,7 @@ console.log(x, y); // 10 10
 
 
 
-#### 5.1 동등 / 일치 비교 연산자(Equality/match comparison operator)
+#### 📒 동등 / 일치 비교 연산자(Equality/match comparison operator)
 
 | 비교 연산 | 의미        | 사례    | 설명                     |
 | --------- | ----------- | ------- | ------------------------ |
@@ -294,7 +289,7 @@ isNaN(NaN) // true
 5 !== '5' //true
 ```
 
-##### 5.1.1 다른 데이터 타입을 가진 값 비교
+##### 📗 다른 데이터 타입을 가진 값 비교
 
 - 비교하려는 값의 데이터 타입이 다르면 자바스크립트는 이 값들을 숫자형으로 바꿈.
 
@@ -324,13 +319,13 @@ console.log('' == false); // true
 console.log(0 === false) // false
 ```
 
-##### 5.1.2 null이나 undefined와 비교
+##### 📗 `null`이나 `undefined` 비교
 
 - `null`과 `undefined` 모두 '값이 없다'는 값이자, 데이터 타입을 나타냄
 - `null`은 값이지만 값으로서 의미없는 특별한 값이 등록되어 있는 것
 -  `undefined`는 등록이 되어있지 않기 때문에 초기화도 정의되어 있지 않은 것
 
-##### 5.1.3 ==(동등연산자)를 사용하여 null과 undefined 비교
+##### 📗 `==`(동등연산자)를 사용하여 null과 undefined 비교
 
 - 동등연산자는 값만 비교하기 때문에 `null`과 `undefined`의 비교시 `true`를 반환합니다.
 
@@ -338,7 +333,7 @@ console.log(0 === false) // false
 console.log(null == undefined) //true
 ```
 
-##### 5.1.4 ===(일치연산자)를 사용하여 null과 undefined 비교
+##### 📗 `===`(일치연산자)를 사용하여 null과 undefined 비교
 
 - 일치연산자는 값과 타입을 비교하는데, `null`과 `undefined`의 데이터 타입이 다르기 때문에 `false`가 반환됨
 
@@ -346,13 +341,13 @@ console.log(null == undefined) //true
 console.log(null === undefined) //false
 ```
 
-#### 5.2 대소 관계 비교 연산자(Case relational comparison operator)
+#### 📒 대소 관계 비교 연산자(Case relational comparison operator)
 
 ![img](https://media.vlpt.us/images/moonsemi1230/post/473a834e-3002-4f05-b372-4016c142e766/2startup-javascript-8-638.jpg)
 
 - 대소 관계 비교 연산자(Case relational comparison operator)는 피연산자의 크기를 비교하여 불리언 값을 반환
 
-## ※ 삼항 조건 연산자(ternary operator)
+## 📕 삼항 조건 연산자(ternary operator)
 
 - 조건식의 평가 결과에 따라 반환할 값을 결정
 
@@ -364,7 +359,7 @@ console.log(null === undefined) //false
 
 - 조건식이 참이면 콜론(:) 앞의 두번째 피연산자가 평가되어 반환되고, 거짓이면 콜론(:) 뒤의 세번째 피연산자가 평가되어 반환
 
-#### 6.1 if/else문
+#### 📒 if/else문
 
 ```jsx
 // if문 안 특정 조건이 만족될 때 실행
@@ -390,7 +385,7 @@ if (b === 5) {
 }
 ```
 
-#### 6.2 swich/case 문
+#### 📒 swich/case 문
 
 ```jsx
 const device = 'iphone';
@@ -415,17 +410,14 @@ switch (device){
 - break = return false; 역할
 - default = else 역할
 
+## 📕 논리 연산자(Logical Operator)
 
+- 논리 연산자는 보통 `Boolean`값과 함께 쓰이며, `Boolean`값을 반환하며 JavaScript가 지원하는 논리 연산자는 아래와 같다.
+  - __||__ : OR연산자
+  - __&&__ : AND연산자
+  - __!__ : NOT연산자
 
-## ※논리 연산자(Logical Operator)
-
-논리 연산자는 보통 `Boolean`값과 함께 쓰이며, `Boolean`값을 반환하며 JavaScript가 지원하는 논리 연산자는 아래와 같다.
-
-- **||** : OR연산자
-- **&&** : AND연산자
-- **!** : NOT연산자
-
-#### 7.1 || (OR연산자)
+#### 📒`||` (OR연산자)
 
 OR연산자는 두개의 `||`(역슬래쉬 기호)로 표시
 
@@ -435,7 +427,7 @@ result = a || b;
 
 인수 중 하나라도 `true`가 있으면 `true`를 반환하고 그렇지 않으면 `false`를 반환
 
-##### 7.1.1 OR연산자 예제
+##### 📗 OR연산자 예제
 
 ```jsx
 o1 = true  || true       // t || t returns true
@@ -462,7 +454,7 @@ if (1 || 0) { 	// if( true || false )처럼 동작
 
 - 위와 같이 숫자 1은 `true`, 숫자 0은  `false`로 처리됨
 
-##### 7.1.2 OR연산자의 구동방식
+##### 📗 OR연산자의 구동방식
 
 ```jsx
 // 1. 왼쪽부터 True 값을 찾아나간다.
@@ -476,13 +468,13 @@ false || false; // false
 false || "" || 500 || 300; // 500
 ```
 
-##### 7.1.3 OR연산자의 진위표
+##### 📗 OR연산자의 진위표
 
 - x || y일 경우 피연산자가 모두 `false`일 때만 `false`값을 가짐
 
 ![img](https://media.vlpt.us/post-images/surim014/aca2b660-2c72-11ea-9073-a1d083e5fbc2/image.png)
 
-#### 7.2 && (AND연산자)
+#### 📒 `&&` (AND연산자)
 
 - AND 연산자는 두개의 `&&`앤퍼센트 기호로 표시되며 두 피연산자가 모두 참일 경우에만 `true`이며 그렇지 않으면 `false`를 반환
 
@@ -491,7 +483,7 @@ result = true && true;
 console.log(result);	// true
 ```
 
-##### 7.2.1 AND연산자 예제
+##### 📗 AND연산자 예제
 
 ```jsx
 a1 = true  && true       // t && t returns true
@@ -507,7 +499,7 @@ a9 = false && ''         // f && f returns false
 
 - OR과 마찬가지로 숫자 1은 true, 숫자 0은 false로 처리
 
-##### 7.2.2 AND연산자의 구동방식
+##### 📗 AND연산자의 구동방식
 
 ```jsx
 // 1. 왼쪽부터 False 값을 찾아나간다.
@@ -521,12 +513,12 @@ false && false; // false
 true && "231" && 0 && 300; // 0
 ```
 
-##### 7.2.3 AND연산자의 진위표
+##### 📗 AND연산자의 진위표
 
 - x && y일 경우 피연산자 모두 `true`여야 `true`가 됨
   ![img](https://media.vlpt.us/post-images/surim014/48d34d10-2c73-11ea-8301-d322db631e8c/image.png)
 
-##### 7.2.4 AND연산자 사용 시, 주의할 점
+##### 📗 AND연산자 사용 시, 주의할 점
 
 - `&&`나 `||`를 실행한 결과값이 항상 `true`아니면 `false`라고 잘못 알고 있는 경우가 매우 많음.
 
@@ -543,7 +535,7 @@ console.log(somethingElse); // 100
 - ** `&&`(AND연산자)는 `||`(OR연산자)보다 우선순위가 높음
 - `a && b || c && d` = `(a && b) || (c && d)`와 같다.
 
-#### 7.3 ! (NOT연산자)
+#### 📒 `!` (NOT연산자)
 
 - NOT연산자는 `!`(느낌표)로 표시
 
@@ -565,7 +557,7 @@ alert( !!null ); 				 // false
 
 
 
-## ※쉼표 연산자(The comma operator) 
+## 📕 쉼표 연산자(The comma operator) 
 
 - 쉼표(,) 연산자(The comma (,) operator )는 모든 연산자들 중에 우선 순위가 가장 늦음. 
 
@@ -578,7 +570,7 @@ x = 1 , y = 2, z = 3; //3
 
 
 
-## ※그룹 연산자(Group operator)
+## 📕 그룹 연산자(Group operator)
 
 - 그룹 연산자(Group operator)는 일반 연산자 우선 순위를 재정의하기 위해 식 또는 하위 식을 둘러싼 한 쌍의 괄호로 구성되므로     우선 순위가 낮은식이 우선 순위가 높은 식보다 먼저 평가 됨.
 
@@ -591,7 +583,7 @@ x = 1 , y = 2, z = 3; //3
 
 
 
-## ※typeof 연산자(typeof operator)
+## 📕 `typeof` 연산자(typeof operator)
 
 ```jsx
 typeof ''               // "string"

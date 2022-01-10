@@ -1,24 +1,22 @@
-# ※객체와 변경불가성(Objects and immutability)
+# 📕 객체와 변경불가성(Objects and immutability)
 
 - 변경불가성은 객체가 생성된 이후 그 상태를 변경할 수 없는 디자인 패턴을 의미
 - Immutabiliity은 함수형 프로그래밍의 핵심 원리
 - 객체는 참조(reference)형태로 전달하고 전달받음.
-- 의도치 않은 객체의 변경이 발생하는 원인의 대다수는 레퍼런스를 참조한 다른 객체에서 객체를 변경하기 때문임.
 
- ▶ 이 문제의 해결 방법은 비용은 조금 들지마 객체를 불변객체로 만들어 프로퍼티의 변경을 방지하며 객체의 변경이 필요한 경우에는 참조가 아닌 객체의 방 어적 복사를 통해 새로운 객체를 생성한 후 변경
+- ES6에서는 불변 데이터 패턴을 쉽게 구현할 수 있는 새로운 기능이 추가되었다.
 
-- ES6에서는 불변 데이터 패턴을 쉽게 구현할 수 있는 새로운 기능이 추가됨
-
-### 1.1 immutable value(불변 값) VS mutable value(가변 값)
+### 📒 Immutable value(불변 값) VS Mutable value(가변 값)
 
 - Javascript의 원시 타입은 변경 불가능한 값
-  1. `boolean`
-  2. `null`
-  3. `undefined`
-  4. `number`
-  5. `string`
-  6. `symbol`
-- 원시 타입 이외의 모든 값은 객체 타입이며 객체 타입은 변경 가능한 값으로 객체는 새로운 값을 다시 만들 필요없이 직접 변경 가능
+  - `boolean``
+  - ``null`
+  - undefined
+  - ``number`
+  - string
+  - ``symbol`
+- 원시 타입 이외의 모든 값은 객체 타입이다.
+- 객체 타입은 변경 가능한 값으로 객체는 새로운 값을 다시 만들 필요없이 직접 변경 가능하다
 
 ```jsx
 var str = 'Hello';
@@ -44,8 +42,7 @@ console.log(statement);  // 'I am an immutable value'
 
 - 위 코드의 `otherStr` 의 값은 `statement` 가 가리키는 문자열을 변형한 것이 아닌 해당 문자열을 가지고 새로운 문자열을 만들어 메모리에 할당한 것
 - 2행에서 `String`객체의 `slice()`메서드는 statement 변수에 저장된 문자열을 변경하는 것이 아니라 사실은 새로운 문자열을 생성하여 반환하고 있음.
-
-▶ 문자열은 변경할 수 없는 immutable value이기 때문
+  - 문자열은 변경할 수 없는 `Immutable value`이기 때문이다.
 
 ```jsx
 var arr = [];
@@ -73,21 +70,20 @@ console.log(myName); // Kim
 - 변수 `myName`에 `user.name`을 할당했을 때 `user.name`의 참조를 할당하는 것이 아니라 immutable한 값 'Lee'가 메모리에 새로 생성되고 `myName`은 이것을 참조하기 때문
 - 따라서 `user.name`의 값이 변경된다 하더라도 변수 `myName`이 참조하고 있는 'Lee'는 변함이 없음
 
-### 2. 불변 데이터 패턴(immutable data pattern)
+### 📒 불변 데이터 패턴(immutable data pattern)
 
-의도하지 않은 객체의 변경이 발생하는 원인의 대다수는 "레퍼런스를 참조한 다른 객체에서 객체를 변경"하기 때문
+- 의도하지 않은 객체의 변경이 발생하는 원인의 대다수는 "레퍼런스를 참조한 다른 객체에서 객체를 변경"하기 때문
+  - 이 문제의 해결 방법은 비용은 조금 들지만 객체를 불변객체로 만들어 프로퍼티의 변경을 방지하며 객체의 변경이 필요한 경우에는 참조가 아닌 객체의 방어적 복사를 통해 새로운 객체를 생성한 후 변경한다.
 
-▶ 이 문제의 해결 방법은 비용은 조금 들지만 객체를 불변객체로 만들어 프로퍼티의 변경을 방지하며 객체의 변경이 필요한 경우에는 참조가 아닌 객체의 방어적 복사를 통해 새로운 객체를 생성한 후 변경
-
-#### 2.1 객체의 방어적 복사(defensive copy)
+#### 📗 객체의 방어적 복사(defensive copy)
 
 - `Object.assign`
 
-#### 2.2 불변객체화를 통한 객체 변경 방지
+#### 📗 불변객체화를 통한 객체 변경 방지
 
 - `Object.freeze`
 
-#### 2.3 Object.assign
+#### 📗 Object.assign
 
 - `Object.assign`은 타깃 객체로 소스 객체의 프로퍼티를 복사
 - 이때 소스 객체의 프로퍼티와 동일한 프로퍼티를 가진 타겟 객체의 프로퍼티들은 소스 객체의 프로퍼티로 덮어쓰게 되고 리턴 값으로 타깃 객체를 반환
@@ -155,7 +151,7 @@ console.log(user2.address.city); // Busan
 - `userl`객체를 빈객체에 복사하여 새로운 객체 `user2`를 생성함.
 - `userl`과 `user2`는 어드레스를 공유하지 않으므로 한 객체를 변경하여도 다른 객체에 아무런 영향을 주지 않음.
 
-#### 2.4 Object.freeze
+#### 📗 Object.freeze
 
 - `Object.freeze()`를 사용하여 불변(immutable) 객체를 만들 수 있음
 
@@ -228,7 +224,7 @@ user.address.city = 'Busan'; // 무시됨
 console.log(user); // { name: 'Lee', address: { city: 'Seoul' } }
 ```
 
-#### 3. Immutable.js
+#### 📗 Immutable.js
 
 - `Object.assign`과 `Object.freeze`을 사용하여 불변 객체를 만드는 방법은 번거러울 뿐더러 성능상 이슈가 있어서 큰 객체에는 사용하지 않는 것이 좋음.
 - 또 다른 대안으로 Facebook에서 제공하는 Immutable.js를 사용하는 방법이 있음.

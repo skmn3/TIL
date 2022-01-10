@@ -1,4 +1,4 @@
-## ※ 타입체크(Type Checking)
+## 📕 타입체크(Type Checking)
 
 
 
@@ -14,15 +14,14 @@ sum('x', 'y'); // 'xy'
 ```
 
 -  자바스크립트 문법상 어떠한 문제도 없으므로 자바스크립트 엔진은 아무런 이의 제기없이 위 코드를 실행
-
 -  변수나 반환값의 타입을 사전에 지정하지 않는 자바스크립트의 동적 타이핑(Dynamic Typing)에 의해서 발생한 것임
--  이와 같은 이유로 자바스크립트는 타입 체크가 필요
+-  이와 같은 이유로 자바스크립트는 타입 체크가 필요하다.
 
 
 
-#### 1. typeof
+### 📒 Typeof
 
-타입 연산자(Type Operator) `typeof`는 피연산자의 데이터 타입을 문자열로 반환
+- 타입 연산자(Type Operator) `typeof`는 피연산자의 데이터 타입을 문자열로 반환
 
 ```jsx
 typeof '';              // string
@@ -44,9 +43,9 @@ typeof undeclared;      // undefined (설계적 결함)
 -  따라서 `typeof`는 null을 제외한 원시 타입을 체크하는 데는 문제가 없지만 객체의 종류까지 구분하여 체크하려할 때는 사용 X 
 - 여러 종류의 객체(일반 객체, 배열, Date, RegExp, Function, DOM 요소 등)를 구분
 
-#### 2. Object.prototype.toString
+### 📒 Object.prototype.toString
 
-Object.prototype.toString 메소드는 객체를 나타내는 문자열을 반환
+- Object.prototype.toString 메소드는 객체를 나타내는 문자열을 반환
 
 ```jsx
 var obj = new Object();
@@ -77,9 +76,7 @@ Object.prototype.toString.call(argument);       // [object Arguments]
 Object.prototype.toString.call(undeclared);     // ReferenceError
 ```
 
-
-
-★ 타입을 반환 하는 함수
+#### 📗 타입을 반환 하는 함수
 
 ```jsx
 function getType(target) {
@@ -101,9 +98,7 @@ getType(new Date()); // Date
 getType(function () {}); // Function
 ```
 
-
-
-★ 앞에서 살펴본 sum 함수에 타입 체크 기능을 추가
+##### 📃 앞에서 살펴본 sum 함수에 타입 체크 기능을 추가
 
 ```jsx
 function sum(a, b) {
@@ -118,9 +113,7 @@ console.log(sum(10, 20));   // 30
 console.log(sum('10', 20)); //TypeError
 ```
 
-
-
-★타입별로 체크하는 기능
+##### 📃 타입별로 체크하는 기능
 
 ```jsx
 function getType(target) {
@@ -170,7 +163,7 @@ function isFunction(target) {
 
 
 
-#### 3. instanceof
+#### 📗 Instanceof
 
 - `Object.prototype.toString`를 사용하여 객체의 상속 관계까지 체크할 수는 없음
 
@@ -206,9 +199,7 @@ css({}, 'color', 'red');
   console.log(person instanceof Object); // true
   ```
 
-
-
-★  css 함수에 타입 체크 기능을 추가
+##### 📃 css 함수에 타입 체크 기능을 추가
 
 ```html
 <!DOCTYPE html>
@@ -249,7 +240,7 @@ css({}, 'color', 'red');
 
 
 
-#### 4. 유사 배열 객체
+#### 📗 유사 배열 객체
 
 - 배열인지 체크하기 위해서는 Array.isArray 메소드를 사용
 - 유사 배열 객체(array-like object)은 length 프로퍼티를 갖는 객체
