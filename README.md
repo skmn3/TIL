@@ -1,6 +1,8 @@
-# Learn Javascript
+# Today I Learned
 
-**글 쓰기**
+
+
+__글 쓰기__
 
 > 글 말머리에 쓰기
 
