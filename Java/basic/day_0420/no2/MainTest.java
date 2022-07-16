@@ -12,6 +12,5 @@ public class MainTest {
 		rc.turnOff();
 		rc.setVolume(8);
 		rc.setVolume(20);
-	}
-	
+	}	
 }
