@@ -2,7 +2,7 @@ package Java.basic.day_0420.no1;
 
 public interface RemoteControl {
 	
-	// 상수
+	// 상수 메소드
 	int MAX_VOLUME = 10;
 	int MIN_VOLUME = 0;
 	
