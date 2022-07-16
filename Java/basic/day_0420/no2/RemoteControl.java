@@ -2,11 +2,11 @@ package Java.basic.day_0420.no2;
 
 public interface RemoteControl {
 	
-	// 상수
+	// 상수 메소드
 	int MAX_VOLUME = 10;
 	int MIN_VOLUME = 0;
 	
-	// 추상메소드
+	// 추상 메소드
 	void turnOn();
 	void turnOff();
 	void setVolume(int volume);
@@ -24,4 +24,5 @@ public interface RemoteControl {
 	static void ChangeBattery() {
 		System.out.println("건전지를 교환합니다");
 	}
+
 }
