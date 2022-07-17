@@ -1,5 +1,9 @@
 # Today I Learned
 
+## Badge
+
+[![OSCS Status](https://www.oscs1024.com/platform/badge/skmn3/TIL.svg?size=small)](https://www.oscs1024.com/project/skmn3/TIL?ref=badge_small)
+
 __글 쓰기__
 
 > 글 말머리에 쓰기
